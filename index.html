@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Leitura OCR</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+
+</head>
+<body>
+
+
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">OCR</a>
+      <ul class="right hide-on-med-and-down">
+  
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+  
+      </ul>
+      
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+  <form method="post" action="upload.php" enctype="multipart/form-data" id="registerForm" name="registerForm">
+      <br><br>
+      <h1 class="header center orange-text">Selecione o Arquivo para Leitura</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Ao selecionar o arquivo o sofware irá realizar a leitura dos caracteres e exportar para documento MS Word (RTF) </h5>
+      </div>
+      <div class="row center">
+
+     	<input  class="hide" type="file" id="arquivo" name="arquivo">
+     	<br>
+
+        <a id="btn" class="btn-large waves-effect waves-light orange">Enviar Arquivo</a>
+      </div>
+      <br><br>
+      </form>
+    </div>
+  </div>
+
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+
+  <script>
+  	$(document).ready(function() {
+
+  		$('#btn').click(function(event) {
+  			$('#arquivo').trigger('click');
+
+
+  		//	
+  		});
+
+  		$('#arquivo').change(function(event) {
+  			/* Act on the event */
+  			$("#registerForm" ).submit();
+  		});
+
+
+  		
+  	});
+
+  </script>
+
+	
+</body>
+</html>
