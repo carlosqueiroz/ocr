@@ -1,6 +1,6 @@
 <?php
   header('Content-type: application/rtf');
-
+  header('Content-Disposition: attachment; filename="file.rtf"');
 // Pasta onde o arquivo vai ser salvo
 $_UP['pasta'] = 'uploads/';
 
